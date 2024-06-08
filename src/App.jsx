@@ -59,7 +59,7 @@ export default function App() {
             <div className="input-container">
                 <input
                     type="text"
-                    placeholder="Add New Task"
+                    placeholder="Enter New Task"
                     value={takeTask}
                     onChange={handleInput}
                 />
