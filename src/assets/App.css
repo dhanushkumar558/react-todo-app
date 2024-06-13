@@ -3,19 +3,19 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Align items at the top */
+    align-items: flex-start;
     height: 100vh;
     margin: 0;
     padding: 20px;
 }
-.todo
-{
-    color:yellow;   
+
+.todo {
+    color: yellow;
 }
 
 .input-container {
-    width: 700px;
-    max-width: 410px;
+    width: 100%;
+    max-width: 800px;
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
@@ -30,8 +30,8 @@ body {
     margin-right: 10px;
     font-size: 16px;
 }
-.center
-{
+
+.center {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -54,18 +54,17 @@ body {
 
 .tasks-list-container {
     width: 100%;
-    max-width: 600px;
+    max-width: 700px;
     flex: 1;
     overflow-y: auto;
-    max-height: 100vh;
-    /* Limit the height of the list */
+    max-height: 80vh;
+    padding-right: 20px;
 }
 
 .tasks-list {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    
 }
 
 .task-item {
@@ -74,7 +73,7 @@ body {
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: lightcyan; 
+    background-color: lightcyan;
 }
 
 .task-container {
@@ -92,7 +91,7 @@ body {
 .edit-container {
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    width: auto;
 }
 
 .edit-container input {
@@ -100,8 +99,9 @@ body {
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 8px;
-    margin-right: 10px;
     font-size: 16px;
+    margin-right: 10px;
+    
 }
 
 .edit-container button {
@@ -140,8 +140,6 @@ body {
 .task-buttons button:last-child {
     margin-right: 0;
 }
-
-
 
 .task-buttons button.delete {
     background-color: #dc3545;

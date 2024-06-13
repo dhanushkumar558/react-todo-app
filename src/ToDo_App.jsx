@@ -1,6 +1,7 @@
-import { useState, useEffect } from "react";
+import  { useState, useEffect } from "react";
 import "./assets/App.css";
- export default function ToDo_App() {
+
+export default function ToDo_App() {
     const [takeTask, setTakeTask] = useState("");
     const [tasks, setTasks] = useState([]);
     const [editingTaskIndex, setEditingTaskIndex] = useState(null);
@@ -9,7 +10,7 @@ import "./assets/App.css";
     useEffect(() => {
         const storedTasks = localStorage.getItem("tasks");
         if (storedTasks) {
-            setTasks(JSON.parse(storedTasks));   
+            setTasks(JSON.parse(storedTasks));
         }
     }, []);
 
@@ -79,7 +80,7 @@ import "./assets/App.css";
                                 </div>
                             ) : (
                                 <div className="task-container">
-                                    <span>{task}</span>
+                                    <span className="task-text">{task}</span>
                                     <div className="task-buttons">
                                         <button className="edit" onClick={() => handleEdit(index)}>Edit</button>
                                         <button className="delete" onClick={() => deleteTask(index)}>Delete</button>
